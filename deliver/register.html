@@ -1,0 +1,161 @@
+<?php
+include(Registration.php)
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Login & Registration Form | Codehal</title>
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(log.jpg)no-repeat;
+    background-size: cover;
+  }
+  .wrapper {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    background: transparents;
+    box-shadow: 0 0 50px white;
+    border-radius: 20px;
+    padding: 40px;
+    overflow: hidden;
+  }
+  .wrapper:hover {
+    animation: animate 1s linear infinite;
+  }
+  .form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: 1s ease-in-out;
+  }
+  .wrapper.active .form-wrapper.sign-in {
+    transform: translateY(-450px);
+  } 
+  h2 {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+  }
+  .input-group {
+    position: relative;
+    margin: 30px 0;
+    border-bottom: 2px solid #fff;
+  }
+  .input-group label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  .input-group input {
+    width: 320px;
+    height: 20px;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+  .input-group input:focus~label,
+  .input-group input:valid~label {
+    top: -5px;
+  }
+  .remember {
+    margin: -5px 0 15px 5px;
+  }
+  .remember label {
+    color: #fff;
+    font-size: 14px;
+  }
+  .remember label input {
+    accent-color: #0ef;
+  }
+  button {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background: white;
+    box-shadow: 0 0 10px white;
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+  }
+  .signin-link p {
+    color: #fff;
+  }
+  label{
+    color: white;
+  }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="form-wrapper sign-up">
+      <form action="registration.php" method="post">
+        <h2>Sign Up</h2>
+        <div class="input-group">
+          <input type="text" name="username" required>
+          <label for="">Username</label>
+        </div>
+        <div class="input-group">
+          <input type="email" name="email" required>
+          <label for="">Email</label>
+        </div>
+        <div class="input-group">
+          <input type="text" name="Age">
+          <label for="">Age</label>
+        </div>
+        <div class="gender-group">
+          <label>Gender:</label>
+          <label><input type="radio" name="gender" value="male" required> Male</label>
+          <label><input type="radio" name="gender" value="female" required> Female</label>
+          <label><input type="radio" name="gender" value="other" required> Other</label>
+        </div>
+        <div class="input-group">
+          <input type="password" name="password" required>
+          <label for="">Password</label>
+        </div>
+        <div class="input-group">
+          <input type="password" name="password" required>
+          <label for="">Confirm Password</label>
+        </div>
+        <div class="remember">
+          <label><input type="checkbox"> I agree to the terms & conditions</label>
+        </div>
+        <a href="home.html">
+        <button type="submit">Sign Up</button>
+        </a>
+        <div class="signin-link">
+          <p>Already have an account? <a href="login.html" class="signInBtn-link">Sign In</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

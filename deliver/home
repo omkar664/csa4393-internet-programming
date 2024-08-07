@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Food Categories</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: rgba(76, 175, 80, 0.9);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .cart-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5em;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.3);
+            width: 50px;
+            height: 50px;
+        }
+        .cart-icon:hover {
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .cart-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: red;
+            color: white;
+            border-radius: 50%;
+            padding: 5px 10px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            padding: 20px;
+            flex-wrap: wrap;
+            flex: 1;
+            margin-top: auto; /* Push container to the bottom */
+        }
+        .category {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            width: 30%;
+            text-align: center;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .category:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        .category img {
+            width: 100%;
+            height: auto;
+            border-bottom: 3px solid #4CAF50;
+        }
+        .category h2 {
+            background-color: #4CAF50;
+            color: white;
+            margin: 0;
+            padding: 15px 0;
+            font-size: 1.5em;
+            text-transform: uppercase;
+        }
+        .category p {
+            padding: 20px;
+            font-size: 1.1em;
+            color: #555;
+        }
+        @media (max-width: 768px) {
+            .category {
+                width: 80%;
+            }
+        }
+        @media (max-width: 480px) {
+            .category {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="cart.html" class="cart-icon" title="Cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-badge">3</span> <!-- Number of items in cart -->
+        </a>
+        <h1>Healthy Food Categories</h1>
+    </header>
+
+    <div class="container">
+        <div class="category">
+            <img src="https://via.placeholder.com/300x200?text=Vegetables" alt="Vegetables">
+            <h2>Vegetables</h2>
+            <p>Explore a wide variety of fresh and healthy vegetables.</p>
+        </div>
+        
+        <div class="category">
+            <img src="https://via.placeholder.com/300x200?text=Fruits" alt="Fruits">
+            <h2>Fruits</h2>
+            <p>Discover delicious and nutritious fruits from around the world.</p>
+        </div>
+        
+        <div class="category">
+            <img src="https://via.placeholder.com/300x200?text=Milk" alt="Milk">
+            <h2>Milk</h2>
+            <p>Find high-quality milk products to meet your daily needs.</p>
+        </div>
+    </div>
+
+    <!-- Font Awesome for cart icon -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
